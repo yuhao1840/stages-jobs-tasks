@@ -26,6 +26,7 @@ stages:
 
 - stage: DeployUSEast
   displayName: Deploy to US East environment
+  dependsOn: []
   jobs:
   - job: DeployFrontendDev
     displayName: Deploy frontend to DEV
@@ -41,6 +42,7 @@ stages:
 
 - stage: DeployUSWest
   displayName: Deploy to US West environment
+  dependsOn: []
   jobs:
   - job: DeployFrontendDev
     displayName: Deploy frontend to DEV
@@ -56,6 +58,7 @@ stages:
 
 - stage: DeployEurope
   displayName: Deploy to Europe environment
+  dependsOn: []
   jobs:
   - job: DeployFrontendProd
     displayName: Deploy frontend to PROD
