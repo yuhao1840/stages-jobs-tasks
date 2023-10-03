@@ -24,8 +24,8 @@ stages:
     - script: echo running unit tests for backend app
       displayName: unit tests backend
 
-- stage: DeployDev
-  displayName: Deploy to DEV environment
+- stage: DeployUSEast
+  displayName: Deploy to US East environment
   jobs:
   - job: DeployFrontendDev
     displayName: Deploy frontend to DEV
@@ -39,8 +39,23 @@ stages:
     - script: echo deploying backend app to DEV
       displayName: deploy backend app to DEV
 
-- stage: DeployProd
-  displayName: Deploy to PROD environment
+- stage: DeployUSWest
+  displayName: Deploy to US West environment
+  jobs:
+  - job: DeployFrontendDev
+    displayName: Deploy frontend to DEV
+    steps:
+    - script: echo deploying frontend app to DEV
+      displayName: deploy frontend app to DEV
+
+  - job: DeployBackendDev
+    displayName: Deploy backend to DEV
+    steps:
+    - script: echo deploying backend app to DEV
+      displayName: deploy backend app to DEV
+
+- stage: DeployEurope
+  displayName: Deploy to Europe environment
   jobs:
   - job: DeployFrontendProd
     displayName: Deploy frontend to PROD
