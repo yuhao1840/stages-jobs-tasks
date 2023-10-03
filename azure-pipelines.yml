@@ -45,11 +45,11 @@ stages:
   - job: DeployFrontendProd
     displayName: Deploy frontend to PROD
     steps:
-    - script: echo deploying frontend app to PROD
+    - script: echo HYU deploying frontend app to PROD
       displayName: deploy frontend app to PROD
 
   - job: DeployBackendProd
     displayName: Deploy backend to PROD
     steps:
-    - script: echo deploying backend app to PROD
+    - script: echo HYU deploying backend app to PROD
       displayName: deploy backend app to PROD
